@@ -34,7 +34,8 @@ set: push bx
      mov bh,0
      add bx,bx
      
-     mov si, table-s+200h     
+     mov si,table-s+200h     
+     add si,bx
      call word ptr cs:[si]
            
 sret: pop si
